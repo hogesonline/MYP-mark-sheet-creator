@@ -104,20 +104,20 @@ int main(int argc, string argv[])
     //    printf("\n");
     //}
     sort_pairs();
-    //for (int a = 0; a < pair_count; a++)
-    //{
-    //    printf("%d %d\n", pairs[a].winner, pairs[a].loser);
-    //}
+    for (int a = 0; a < pair_count; a++)
+    {
+        printf("%d %d\n", pairs[a].winner, pairs[a].loser);
+    }
     lock_pairs();
-    //for (int m = 0; m < candidate_count; m++)
-    //{
-    //    // Query for each rank
-    //    for (int n = 0; n < candidate_count; n++)
-    //    {
-    //        printf("%d |", locked[m][n]);
-    //    }
-    //    printf("\n");
-    //}
+    for (int m = 0; m < candidate_count; m++)
+    {
+        // Query for each rank
+        for (int n = 0; n < candidate_count; n++)
+        {
+            printf("%d |", locked[m][n]);
+        }
+        printf("\n");
+    }
     print_winner();
     return 0;
 }
@@ -278,3 +278,4 @@ void print_winner(void)
     }
     return;
 }
+
